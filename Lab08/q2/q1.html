@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculate Circle Area</title>
+</head>
+<body>
+  <script>
+    function calculateArea() {
+      const radius = parseFloat(prompt("Enter the radius of the circle:"));
+      if (isNaN(radius)) {
+        alert("Invalid input! Please enter a valid number.");
+      } else {
+        const pi = 22 / 7;
+        const area = pi * radius * radius;
+        alert(`The area of the circle is: ${area.toFixed(2)}`);
+      }
+    }
+
+    calculateArea(); // Automatically prompt for input when the page loads.
+  </script>
+</body>
+</html>

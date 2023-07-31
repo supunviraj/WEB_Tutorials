@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Background Color on Mouseover</title>
+  <style>
+    .color-btn {
+      width: 100px;
+      height: 50px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="color-btn" id="redBtn" onmouseover="changeColor('red')" onmouseout="resetColor('red')">Red</button>
+  <button class="color-btn" id="greenBtn" onmouseover="changeColor('green')" onmouseout="resetColor('green')">Green</button>
+  <button class="color-btn" id="blueBtn" onmouseover="changeColor('blue')" onmouseout="resetColor('blue')">Blue</button>
+
+  <script>
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+
+    function resetColor(color) {
+      document.body.style.backgroundColor = "white"; // Change this to the default background color you desire.
+    }
+  </script>
+</body>
+</html>

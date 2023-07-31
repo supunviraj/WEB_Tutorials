@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extract Year of Birth from NIC</title>
+</head>
+<body>
+  <script>
+    function extractYearOfBirth(nic) {
+      if (nic.length < 4) {
+        return 'Invalid NIC number';
+      }
+
+      const yearDigits = nic.slice(0, 4);
+      const yearOfBirth = parseInt(yearDigits, 10);
+      
+      // Assuming that the NIC format indicates the year of birth, we'll perform a basic validation.
+      const currentYear = new Date().getFullYear();
+      if (yearOfBirth <= currentYear) {
+        return yearOfBirth;
+      } else {
+        return 'Invalid year of birth';
+      }
+    }
+
+    function displayYearOfBirth() {
+      const nicNumber = prompt('Enter your NIC number (e.g., 1990XXXXXX):');
+      const yearOfBirth = extractYearOfBirth(nicNumber);
+
+      alert('Year of Birth: ' + yearOfBirth);
+    }
+
+    displayYearOfBirth();
+  </script>
+</body>
+</html>
