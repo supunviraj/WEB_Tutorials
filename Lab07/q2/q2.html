@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculation</title>
+</head>
+<body>
+  <h1>Grade Calculation</h1>
+  <p>Enter 5 marks:</p>
+  
+  <script>
+    function calculateGrade() {
+      var total = 0;
+      var marks = [];
+      
+      // Prompt the user for marks and store them in an array
+      for (var i = 1; i <= 5; i++) {
+        var mark = parseInt(prompt("Enter mark " + i));
+        marks.push(mark);
+        total += mark;
+      }
+      
+      // Calculate the average
+      var average = total / marks.length;
+      
+      // Update the result div with the total and average
+	  alert("Total marks: " + total + "\nAverage marks: " + average);
+      var resultDiv = document.getElementById("result");
+	  
+      resultDiv.innerHTML = "<h3><br>Total marks: " + total + "<br>Average marks: " + average;
+       
+      // Check the average and display appropriate message
+      if (average > 30) {
+	    alert("Congrats! You passed");
+        resultDiv.innerHTML += "<h3><br>Congrats! You passed</h3>";
+      } else {
+	    alert("Better luck next time");
+        resultDiv.innerHTML += "<h3><br>Better luck next time</h3>";
+      }
+    }
+  </script>
+  
+  <button onclick="calculateGrade()">Grade</button>
+  
+  <div id="result"></div>
+  
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: rgb(9, 5, 254);
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:skyblue;
+        }
+        input, select {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form action="process_form.php" method="post">
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name" required>
+
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name" required>
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" id="male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female" required>
+        <label for="female">Female</label>
+
+        <label for="academic_year">Academic Year</label>
+        <select name="academic_year" id="academic_year" required>
+            <option value="first year">First Year</option>
+            <option value="second year">Second Year</option>
+            <option value="third year">Third Year</option>
+            <option value="fourth year">Fourth Year</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="phone_number">Phone Number</label>
+        <input type="tel" name="phone_number" id="phone_number" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
